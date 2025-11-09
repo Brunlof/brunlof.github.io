@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="utf-8">
-  <title>Hej från brunlof.com 👋</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/favicon.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mmm, banana...</title>
   <style>
     body {
-      font-family: system-ui, sans-serif;
-      text-align: center;
-      margin-top: 15%;
-      background: #fafafa;
+      background-color: #fefae0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      flex-direction: column;
+      font-family: sans-serif;
     }
-    h1 { color: #333; }
+    img {
+      width: 300px;
+      border-radius: 20px;
+    }
   </style>
 </head>
 <body>
-  <h1>Hej 👋</h1>
-  <p>Detta är min publika sida via <b>GitHub Pages</b>.</p>
-  <p><a href="https://github.com/brunlof">Besök min GitHub-profil</a></p>
+  <h1>Mmmm, banana... 🍌</h1>
+  <img id="banana" src="banana0.png" alt="Green">
+  <script>
+    const images = ["banana0.png","banana1.png","banana2.png","poop.png"];
+    let i = 0;
+    setInterval(() => {
+      i = (i + 1) % images.length;
+      document.getElementById("banana").src = images[i];
+    }, 1500);
+  </script>
 </body>
 </html>
